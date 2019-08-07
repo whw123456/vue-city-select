@@ -39,8 +39,6 @@ import cityJson from '../assets/js/citys'
 export default {
   name: 'CitySelect',
   props: {
-    changeFn: Function,
-    toggleFn: Function
   },
   data () {
     return {
@@ -69,7 +67,7 @@ export default {
   methods: {
     toggleFun: function () {
       this.toggle = !this.toggle
-      this.toggleFn && this.toggleFn(this.toggle)
+      this.$emit('toggleFn', this.toggle)
       const scrollDom = this.$refs['scrollDom']
       if (scrollDom.children && scrollDom.children.length > 0 && this.toggle) {
         setTimeout(() => {
@@ -83,7 +81,6 @@ export default {
     },
     scrollTo: function (index) {
       const scrollDom = this.$refs['scrollDom']
-      console.log(this.$refs)
       const scrollInner = this.$refs['scrollInner']
       scrollInner.scrollTop = scrollDom.children[index].offsetTop - 40
       this.activeIndex = index
@@ -103,8 +100,8 @@ export default {
     checkVal: function (val, key, index) {
       this.cityVal = val
       this.checkIndex = index + '' + key
-      this.toggle = false
-      this.change && this.change(val)
+      this.toggleFun()
+      this.$emit('changeFn', val)
     },
     mountHeight: function () {
       this.domInner.scrollInner = `${window.screen.height * 0.9 - 50}px`
@@ -115,6 +112,10 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<style lang="scss">
+@import '../assets/css/reset.scss';
+</style>
 <style scoped lang="scss">
+
 @import "../assets/css/style.scss";
 </style>

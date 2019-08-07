@@ -1,11 +1,14 @@
 {
-  "name": "cityselect",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@fuyangzhijian/vuecityselect",
+  "version": "0.1.1",
+  "private": false,
+  "author":"whw1234",
+  "main": "lib/cityselect.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name cityselect --dest lib src/lib/index.js"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -22,5 +25,16 @@
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "license":"MIT",
+  "description":"最全的中国城市下拉组建，按首字母分组排序",
+  "keyword":[
+    "city-select",
+    "city",
+    "vue"
+  ],
+  "repository":{
+    "type": "git",
+    "url": "git+https://github.com/whw123456/vue-city-select.git"
+    }
 }

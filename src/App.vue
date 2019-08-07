@@ -1,25 +1,23 @@
 <template>
   <div id="app">
-    <CitySelect :change="change"/>
+    <CitySelect @changeFn="change" @toggleFn="toggle"/>
   </div>
 </template>
 
 <script>
-import CitySelect from './lib/components/CitySelect.vue'
 
 export default {
   name: 'app',
   components: {
-    CitySelect
+
   },
   methods: {
     change: function (val) {
       console.log(val)
+    },
+    toggle: function (flag) {
+      console.log(flag)
     }
   }
 }
 </script>
-
-<style lang="scss">
-   @import './lib/assets/css/reset.scss';
-</style>
