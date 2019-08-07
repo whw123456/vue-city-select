@@ -1,28 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <CitySelect :change="change"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CitySelect from './lib/components/CitySelect.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    CitySelect
+  },
+  methods: {
+    change: function (val) {
+      console.log(val)
+    }
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+   @import './lib/assets/css/reset.scss';
 </style>
