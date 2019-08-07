@@ -1,28 +1,19 @@
 # cityselect
 
-## Project setup
+## 安装
 ```
-yarn install
+yarn add @fuyangzhijian/vuecityselect
 ```
-
-### Compiles and hot-reloads for development
+## 导入
 ```
-yarn run serve
+main.js添加
+import "@fuyangzhijian/vuecityselect/lib/cityselect.css"
+import CitySelect from '@fuyangzhijian/vuecityselect'
 ```
-
-### Compiles and minifies for production
+## 注册
 ```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
+main.js添加
+Vue.use(CitySelect)
 ```
 
 ### Customize configuration
