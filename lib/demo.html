@@ -1,10 +1,26 @@
-<meta charset="utf-8">
-<title>cityselect demo</title>
-<script src="./cityselect.umd.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-<link rel="stylesheet" href="./cityselect.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <script src="./cityselect.umd.js"></script>
 
+    <link rel="stylesheet" href="./cityselect.css">
+    <title>cityselect demo</title>
+</head>
 
-<script>
-console.log(cityselect)
-</script>
+<body>
+    <div id="app">
+        <city-select></city-select>
+    </div>
+    <script>
+        new Vue({
+           el:"#app"
+        })
+    </script>
+</body>
+
+</html>
