@@ -1,6 +1,6 @@
 {
   "name": "@fuyangzhijian/vuecityselect",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "author":"whw1234",
   "main": "lib/cityselect.umd.min.js",
